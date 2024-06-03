@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device.width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" sizes="32x32">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet">
+
+    <title>Loon – Portfolio</title>
+</head>
+
+<body class="container">
+    <button id="backToTopBtn" class="back-to-top-btn" onclick="backToTop()">↑</button>
+    <header class="page-header">
+        <nav class="navbar">
+            <div class="burger-menu" onclick="toggleMenu()">
+                <div class="burger-x">
+                    <div class="burger-line line1"></div>
+                    <div class="burger-line line2"></div>
+                    <div class="burger-line line3"></div>
+                </div>
+            </div>
+            <div class="logo">
+                <a href="index.html" title="Logo">
+                    <img class="nav-logo" src="img/Loon_Logo_Bildmarke.svg"
+                        alt="Personal logo of Loon Design. It's an alien head in outlines with a crescent moon on their forehead.">
+                </a>
+            </div>
+        </nav>
+        <div id="overlay" class="overlay" onclick="toggleMenu()">
+            <div class="overlay-content">
+                <ul class="menu-items">
+                    <li>
+                        <h2><a href="index.html">welcome</a></h2>
+                    </li>
+                    <li>
+                        <h2><a href="about.html">about me</a></h2>
+                    </li>
+                    <li>
+                        <h2><a href="work.html">work</a></h2>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="home_intro">
+            <img class="home_illu01" src="img/Illu01.svg">
+            <div class="text-box">
+                <h1>ideas created
+                    <br>with purpose.
+                </h1>
+                <p>Hi, my name is Hannah. I am a digital artist and product designer based in
+                    Hamburg,
+                    Germany. My path
+                    combines art, design, and frontend development to craft purposeful digital experiences.</p>
+                <button type="button" onclick="window.location.href='mailto:hi@loon-design.de';">
+                    Text me!
+                </button>
+            </div>
+        </section>
+        <section class="home_section--wrapper">
+            <div class="wrapper">
+                <div class="home_section--2">
+                    <div class="wrapper-text-box">
+                        <img class="home_illu_services" src="img/services/services_01.svg">
+                        <h2>interaction
+                            <br>design
+                        </h2>
+                        <p class="text"> Designing interactions that seamlessly connect people and technology, ensuring
+                            intuitive and
+                            meaningful digital experiences throughout the user journey.
+                        </p>
+                    </div>
+                    <div class="wrapper-text-box">
+                        <img class="home_illu_services" src="img/services/services_02.svg">
+                        <h2>prototype
+                            <br>design
+                        </h2>
+                        <p class="text"> Breathing life into concepts, iterating rapidly to refine ideas, and
+                            identifying
+                            usability
+                            challenges for further evolution.
+                        </p>
+                    </div>
+                </div>
+                <div class="home_section--3">
+                    <div class="wrapper-text-box">
+                        <img class="home_illu_services" src="img/services/services_03.svg">
+                        <h2>user interface
+                            <br>design
+                        </h2>
+                        <p class="text"> Creating detailed design files that serve as in-depth guides for frontend
+                            developers and ensure
+                            smooth implementation of visual elements and interactions.
+                        </p>
+                    </div>
+                    <div class="wrapper-text-box">
+                        <img class="home_illu_services" src="img/services/services_04.svg">
+                        <h2>visual
+                            <br>design
+                        </h2>
+                        <p class="text"> Prioritising unity and ensuring harmony between elements to create impactful
+                            first
+                            impressions.
+                        </p>
+                    </div>
+                </div>
+                <div class="home_section--4">
+                    <div class="wrapper-text-box">
+                        <img class="home_illu_services" src="img/services/services_05.svg">
+                        <h2><span class="transparent">_</span>
+                            <br>illustration
+                        </h2>
+                        <p class="text"> Exploring diverse styles, leaning towards illustrations with a focus on
+                            outlines
+                            and vibrant yet
+                            flat or no colouring, giving an extravagant touch.
+                        </p>
+                    </div>
+                    <div class="wrapper-text-box">
+                        <img class="home_illu_services" src="img/services/services_06.svg">
+                        <h2>frontend
+                            <br>development
+                        </h2>
+                        <p class="text"> Translating design concepts into interactive web experiences, fluidly
+                            integrating
+                            aesthetics and
+                            functionality using HTML, CSS, and JavaScript, while constantly learning and adapting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="home_section--5">
+            <div class="text-box">
+                <h1 class="resume">resume
+                </h1>
+                <a href="files/Teichert_Hannah_Marleen_Product_Design.pdf" class="button" download>Download (PDF)</a>
+            </div>
+            <img class="home_illu02" src="img/Illu02.svg">
+        </section>
+        <section class="divider"><img src="img/Divider01.svg">
+        </section>
+        <section class="home_section--6">
+            <div class="text-box--6">
+                <h1>get to know
+                    <br>me better
+                </h1>
+                <button class="button--6" type="button" onclick="window.location.href='about.html';">
+                    who is she?
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="legal-disclosure.html">LEGAL DISCLOSURE</a>
+        <button id="back-to-top-btn" class="back-to-top-btn" onclick="backToTop()">↑</button>
+    </footer>
+    <script src="js/effects.js"></script>
+    <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>

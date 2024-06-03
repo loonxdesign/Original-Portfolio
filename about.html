@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device.width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" sizes="32x32">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>WHO IS SHE?</title>
+</head>
+
+<body class="container">
+    <header class="page-header">
+        <nav class="navbar">
+            <div class="burger-menu" onclick="toggleMenu()">
+                <div class="burger-x">
+                    <div class="burger-line line1"></div>
+                    <div class="burger-line line2"></div>
+                    <div class="burger-line line3"></div>
+                </div>
+            </div>
+            <div class="logo">
+                <a href="index.html" title="Logo">
+                    <img class="nav-logo" src="img/Loon_Logo_Bildmarke.svg"
+                        alt="Personal logo of Loon Design. It's an alien head in outlines with a crescent moon on their forehead.">
+                </a>
+            </div>
+        </nav>
+        <div id="overlay" class="overlay" onclick="toggleMenu()">
+            <div class="overlay-content">
+                <ul class="menu-items">
+                    <li>
+                        <h2><a href="index.html">welcome</a></h2>
+                    </li>
+                    <li>
+                        <h2><a href="about.html">about me</a></h2>
+                    </li>
+                    <li>
+                        <h2><a href="work.html">work</a></h2>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="about_bg-img">
+            <section class="about_intro">
+                <h1>who is she?
+                </h1>
+            </section>
+        </div>
+        <section class="about_section--2">
+            <div class="text-box">
+                <h2>artistic
+                    <br>influence
+                </h2>
+                <p> As a half-asian kid of the 90s, my creative journey kicked off early on – growing up with Sailor
+                    Moon and other Manga/Anime, I was absorbing a world of vibrant colours and endless inspiration.
+                    <br><br>
+                    Until my late teens, my passion for drawing manga fueled my artistic growth. Inspired by diverse
+                    cultures and artistic genres over time, my imagination flourished and a greater interest in
+                    classical, modern and digital art soon began to grow.
+                    <br><br>
+                    In my 20s, friends and I formed an artist collective. We teamed up with promoters and clubs, and
+                    combined philosophical, interactive art exhibitions with clubbing.
+                </p>
+            </div>
+            <img class="sailor-mars" src="img/SailorMars01.svg">
+        </section>
+        <br>
+        <section class="about_section--3">
+            <video class="about-video" autoplay loop>
+                <source src="img/hexaschwarz_intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="text-box">
+                <h2>mission
+                </h2>
+                <p> My goal is to revolutionise creative collaboration by crafting a tailored platform for creatives.
+                    From personal experiences, I understand that creatives with diverse expertise need each other to
+                    bring their passion projects to life. Inspired by this, my platform will serve as a matchmaker,
+                    connecting like-minded individuals for projects. Users can publish projects and find qualified
+                    creatives, streamlining collaboration and crowd-funding.
+                </p>
+            </div>
+        </section>
+        <section class="divider"><img src="img/Divider02.svg">
+        </section>
+        <section class="about_section--4">
+            <div class="text-box--4">
+                <h1>back to start?
+                </h1>
+                <button type="button" onclick="window.location.href='index.html';">
+                    yass!
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="legal-disclosure.html">LEGAL DISCLOSURE</a>
+        <button id="backToTopBtn" class="back-to-top-btn" onclick="backToTop()">↑</button>
+    </footer>
+    <script src="js/effects.js"></script>
+    <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>

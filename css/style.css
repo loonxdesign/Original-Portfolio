@@ -11,9 +11,9 @@ Background Colour: #121212;
 /* TEXT */
 @font-face {
   font-family: 'Constant-Display';
-  src:
-    url('/fonts/Constant-Display.woff2') format('woff2'),
-    url('/fonts/Constant-Display.woff') format('woff'),
+  src: url('/fonts/Constant-Display.woff2') format('woff2'),
+       url('/fonts/Constant-Display.woff') format('woff');
+  font-display: swap;
 }
 
 body {
@@ -351,6 +351,7 @@ footer a {
 
 .wrapper {
   top: 0;
+  position: -webkit-sticky;
   position: sticky;
   width: 100%;
   height: 100vh;
@@ -367,8 +368,6 @@ footer a {
 
 .wrapper-text-box {
   width: 38%;
-  display: flex;
-  flex-flow: column;
 }
 
 .wrapper-text-box h2 {

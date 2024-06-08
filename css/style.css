@@ -757,6 +757,7 @@ footer a {
   .home_section--wrapper .wrapper .home_section--3,
   .home_section--wrapper .wrapper .home_section--4 {
     column-gap: 8%;
+    position: relative;
   }
 
   .home_section--5 {

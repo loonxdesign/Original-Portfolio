@@ -812,6 +812,7 @@ footer a {
   .home_section--wrapper .wrapper .home_section--3,
   .home_section--wrapper .wrapper .home_section--4 {
     width: 200vw;
+    margin: 0px 40px 0px;
   }
 
   /* TEXT-BOXES */

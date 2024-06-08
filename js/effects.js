@@ -40,25 +40,4 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// HORIZONTAL SCROLL
-// Get the wrapper element
-const wrapper = document.querySelector('.wrapper');
-
-// Event listener for vertical scroll
-window.addEventListener('wheel', (event) => {
-  // Check if the wrapper is fully visible
-  const wrapperRect = wrapper.getBoundingClientRect();
-  const isWrapperFullyVisible =
-    wrapperRect.top >= 0 &&
-    wrapperRect.left >= 0 &&
-    wrapperRect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    wrapperRect.right <=
-      (window.innerWidth || document.documentElement.clientWidth);
-
-  // If the wrapper is fully visible, scroll horizontally
-  if (isWrapperFullyVisible && event.deltaY !== 0) {
-    event.preventDefault();
-    wrapper.scrollLeft += event.deltaY;
-  }
-}); 
+//HORIZONTAL SCROLL

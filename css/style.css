@@ -12,7 +12,7 @@ Background Colour: #121212;
 @font-face {
   font-family: 'Constant-Display';
   src: url('/fonts/Constant-Display.woff2') format('woff2'),
-       url('/fonts/Constant-Display.woff') format('woff');
+    url('/fonts/Constant-Display.woff') format('woff');
   font-display: swap;
 }
 
@@ -24,6 +24,15 @@ body {
   color: #e9e9e9;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.bold {
+  font-family: inherit;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #e9e9e9;
+  text-decoration: none;
 }
 
 section {
@@ -71,6 +80,13 @@ a:focus,
 a:active {
   color: #9b53ff;
   cursor: pointer;
+}
+
+.a-normal {
+  color: #9b53ff;
+  font-weight: 200;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 /* BUTTONS */
@@ -598,6 +614,12 @@ footer a {
   cursor: pointer;
 }
 
+/* --------------- IMRPINT --------------- */
+
+.imprint_intro .text-box {
+  margin: 120px 80px;
+}
+
 /* --------------- RESPONSIVE STYLES --------------- */
 
 /* --------------- LARGER SCREENS --------------- */
@@ -777,6 +799,11 @@ footer a {
   .home_illu01 {
     width: 35%;
   }
+
+  /* --------------- WORK --------------- */
+  .imprint_intro .text-box {
+    margin: 80px 40px;
+  }
 }
 
 /* --------------- TABLET VERTICAL + MOBILE SCREENS --------------- */
@@ -909,6 +936,11 @@ footer a {
 
   .social-links {
     gap: 10%;
+  }
+
+  /* --------------- WORK --------------- */
+  .imprint_intro .text-box {
+    margin: 80px 40px;
   }
 }
 

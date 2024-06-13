@@ -11,9 +11,14 @@ Background Colour: #121212;
 /* TEXT */
 @font-face {
   font-family: 'Constant-Display';
-  src: url('/fonts/Constant-Display.woff2') format('woff2'),
-    url('/fonts/Constant-Display.woff') format('woff');
-  font-display: swap;
+  src: url(/fonts/Constant-Display.eot);
+  src: url(/fonts/Constant-Display.eot?#iefix) format('embedded-opentype'),
+    url('/fonts/Constant-Display.woff') format('woff'),
+    url('/fonts/Constant-Display.woff2') format('woff2'),
+    url('/fonts/Constant-Display.ttf') format('truetype'),
+    url('/fonts/Constant-Display.svg#svgConstantDisplay') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {

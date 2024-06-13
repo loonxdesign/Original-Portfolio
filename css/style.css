@@ -199,7 +199,7 @@ button {
   display: none;
   justify-content: center;
   align-items: center;
-  padding-top: 160px;
+  padding-top: 140px;
   animation: overlay 750ms ease 0s 1 normal forwards;
 }
 
@@ -718,6 +718,9 @@ footer a {
     margin-top: -40px;
   }
 
+  .overlay {
+    padding-top: 90px;
+  }
 
   .overlay-content ul li a {
     font-size: 80px;
@@ -756,6 +759,10 @@ footer a {
   .navbar {
     left: 40px;
     right: 40px;
+  }
+
+  .overlay {
+    padding-top: 180px
   }
 
   .back-to-top-btn {
@@ -806,7 +813,7 @@ footer a {
   }
 }
 
-/* --------------- TABLET VERTICAL + MOBILE SCREENS --------------- */
+/* --------------- MINI TABLET VERTICAL + MOBILE SCREENS --------------- */
 @media only screen and (max-width: 820px) {
 
   /* --------------- HOME --------------- */
@@ -823,7 +830,7 @@ footer a {
   /* SECTIONS */
   .home_intro {
     column-gap: 0px;
-    padding: 0px 0px 0px;
+    padding: 60px 0px 0px;
     display: flex;
     flex-flow: column;
     justify-content: left;
@@ -836,11 +843,16 @@ footer a {
     gap: 10%;
   }
 
+  .home_section--wrapper {
+    height: 400vh;
+    position: relative;
+  }
+
   .home_section--wrapper .wrapper .home_section--2,
   .home_section--wrapper .wrapper .home_section--3,
   .home_section--wrapper .wrapper .home_section--4 {
     width: 200vw;
-    margin: 0px 40px 0px;
+    margin: 120px 40px 0px;
   }
 
   /* TEXT-BOXES */
@@ -849,7 +861,7 @@ footer a {
   }
 
   .home_intro .text-box {
-    margin-top: -20px;
+    margin-top: 20px;
   }
 
   .wrapper-text-box {
@@ -869,7 +881,7 @@ footer a {
   /* ILLUSTRATIONS */
   .home_illu01 {
     width: 47%;
-    margin-top: 30px;
+    margin-top: -30px;
     margin-right: -60%;
     margin-bottom: -15%;
   }

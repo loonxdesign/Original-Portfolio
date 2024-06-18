@@ -11,12 +11,12 @@ Background Colour: #121212;
 /* TEXT */
 @font-face {
   font-family: 'Constant-Display';
-  src: url(/fonts/Constant-Display.eot);
-  src: url(/fonts/Constant-Display.eot?#iefix) format('embedded-opentype'),
-    url('/fonts/Constant-Display.woff') format('woff'),
-    url('/fonts/Constant-Display.woff2') format('woff2'),
-    url('/fonts/Constant-Display.ttf') format('truetype'),
-    url('/fonts/Constant-Display.svg#svgConstantDisplay') format('svg');
+  /* src: url(/fonts/Constant-Display.eot); */
+  src: 
+    url('../fonts/Constant-Display.woff') format('woff'),
+    url('../fonts/Constant-Display.woff2') format('woff2'),
+    url('../fonts/Constant-Display.ttf') format('truetype'),
+    url('../fonts/Constant-Display.svg#svgConstantDisplay') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -45,14 +45,14 @@ section {
 }
 
 h1 {
-  font-family: 'Constant', serif;
+  font-family: 'Constant-Display', serif;
   font-size: 100px;
   color: inherit;
   line-height: 1.0;
 }
 
 h2 {
-  font-family: 'Constant', serif;
+  font-family: 'Constant-Display', serif;
   font-size: 60px;
   color: inherit;
   line-height: 1.0;
@@ -622,7 +622,13 @@ footer a {
 /* --------------- IMRPINT --------------- */
 
 .imprint_intro .text-box {
-  margin: 120px 80px;
+  margin: 0px 80px;
+}
+
+.imprint_intro {
+  margin-top: 120px;
+  margin-left: 8%;
+  margin-right: 8%;
 }
 
 /* --------------- RESPONSIVE STYLES --------------- */
@@ -735,6 +741,11 @@ footer a {
     column-gap: 8%;
     padding: 0px 0px 0px;
   }
+
+  .imprint_intro {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 @media only screen and (min-width: 820px) and (max-width: 1400px) {
@@ -815,6 +826,12 @@ footer a {
   /* --------------- WORK --------------- */
   .imprint_intro .text-box {
     margin: 80px 40px;
+  }
+
+  /* --------------- IMPRINT --------------- */
+  .imprint_intro {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
@@ -955,9 +972,10 @@ footer a {
     gap: 10%;
   }
 
-  /* --------------- WORK --------------- */
-  .imprint_intro .text-box {
-    margin: 80px 40px;
+  /* --------------- IMPRINT --------------- */
+  .imprint_intro {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 

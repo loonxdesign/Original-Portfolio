@@ -387,11 +387,7 @@ footer a {
   width: 38%;
 }
 
-.wrapper-text-box {
-  width: 38%;
-}
-
-.wrapper-text-box h2 {
+.wrapper .text-box h2 {
   margin-top: 5px;
 }
 
@@ -977,6 +973,37 @@ footer a {
     margin-left: 0px;
     margin-right: 0px;
   }
+
+
+  /* HORIZONTAL SCROLL FOR SMALL VIEWPORTS */
+  #wrapper {
+      width: 100vh;
+      height: 100vw;
+      margin: 0px 80px 0px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-transform-origin: right top;
+      transform-origin: right top;
+      -webkit-transform: rotate(-90deg) translate3d(0, -100vh, 0);
+      transform: rotate(-90deg) translate3d(0, -100vh, 0);
+  }
+
+  #wrapper>* {
+      -webkit-transform-origin: left top;
+      transform-origin: left top;
+      -webkit-transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
+      transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
+  }
+
+  #wrapper .text-box {
+      position: relative;
+      width: 50%;
+  }
+
+  .css-horizontal-scroll #wrapper {
+      /* Add any additional styles required for the horizontal scroll to work */
+  }
+
 }
 
 @media only screen and (min-width: 600px) and (max-width: 820px) {

@@ -48,29 +48,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // HORIZONTAL SCROLL
   const wrapper = document.querySelector('.wrapper');
-  const homeSections = document.querySelectorAll(
-    '.home_section--wrapper .wrapper .home_section--2, .home_section--wrapper .wrapper .home_section--3, .home_section--wrapper .wrapper .home_section--4'
+  const firstTextBox = document.querySelector(
+    '.home_section--wrapper .wrapper .home_section--2 .text-box'
+  );
+  const lastTextBox = document.querySelector(
+    '.home_section--wrapper .wrapper .home_section--4 .text-box:last-child'
   );
   let startHorizontalScroll = false;
-  let reverseScroll = false;
-  let allowReverseScroll = false;
+  let allowVerticalScroll = false;
 
   const observerOptions = {
     root: null,
     threshold: 1.0,
+    rootMargin: '0px',
   };
 
   const observerCallback = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        if (entry.target === homeSections[0] && reverseScroll) {
-          startHorizontalScroll = false;
-          reverseScroll = false;
-          allowReverseScroll = false;
-        } else if (entry.target === homeSections[homeSections.length - 1]) {
-          reverseScroll = true;
-        } else if (entry.target === homeSections[0]) {
+        if (entry.target === firstTextBox) {
           startHorizontalScroll = true;
+          allowVerticalScroll = false;
+        } else if (entry.target === lastTextBox) {
+          startHorizontalScroll = false;
+          allowVerticalScroll = true;
         }
       }
     });
@@ -78,56 +79,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-  homeSections.forEach((section) => observer.observe(section));
-
-  const reverseObserverOptions = {
-    root: null,
-    threshold: 1.0,
-  };
-
-  const reverseObserverCallback = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        if (entry.target === homeSections[homeSections.length - 1]) {
-          allowReverseScroll = true;
-        } else if (entry.target === homeSections[0]) {
-          startHorizontalScroll = true;
-        } else if (entry.target === homeSections[1]) {
-          allowReverseScroll = false;
-        }
-      }
-    });
-  };
-
-  const reverseObserver = new IntersectionObserver(
-    reverseObserverCallback,
-    reverseObserverOptions
-  );
-
-  homeSections.forEach((section) => reverseObserver.observe(section));
+  observer.observe(firstTextBox);
+  observer.observe(lastTextBox);
 
   window.addEventListener('wheel', (event) => {
-    if (startHorizontalScroll && event.deltaY !== 0 && !reverseScroll) {
+    if (startHorizontalScroll && !allowVerticalScroll) {
       event.preventDefault();
       wrapper.scrollLeft += event.deltaY;
-    } else if (reverseScroll && allowReverseScroll && event.deltaY < 0) {
+    } else if (!startHorizontalScroll && allowVerticalScroll) {
+      // Allow vertical scrolling
       event.preventDefault();
-      wrapper.scrollLeft -= event.deltaY;
-      const firstSectionVisible =
-        homeSections[1].getBoundingClientRect().top < window.innerHeight;
-      if (firstSectionVisible) {
-        reverseScroll = false;
-        startHorizontalScroll = true;
-      }
-    }
-  });
-
-  // Ensure manual scroll back completes correctly
-  window.addEventListener('scroll', () => {
-    const firstSectionVisible =
-      homeSections[0].getBoundingClientRect().top >= 0;
-    if (!firstSectionVisible) {
-      startHorizontalScroll = true;
+      window.scrollBy(0, event.deltaY);
     }
   });
 });

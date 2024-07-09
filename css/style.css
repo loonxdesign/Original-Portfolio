@@ -21,6 +21,16 @@ Background Colour: #121212;
   font-style: normal;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+main {
+  height: 100%;
+}
+
 body {
   min-height: 100vh;
   background-color: #121212;
@@ -309,7 +319,7 @@ footer a {
 
 /* SECTIONS */
 .home_intro {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -341,6 +351,7 @@ footer a {
   align-items: center;
   column-gap: 10%;
   width: 100vw;
+  min-height: 100vh;
   flex: 0 0 auto;
   left: 0;
   position: sticky;
@@ -352,7 +363,7 @@ footer a {
   flex-flow: row wrap;
   justify-content: center;
   column-gap: 10%;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
   padding: 240px 80px 80px;
 }
@@ -360,7 +371,7 @@ footer a {
 .home_section--6 {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
 }
 
@@ -374,12 +385,12 @@ footer a {
   top: 0;
   position: -webkit-sticky;
   position: sticky;
-  width: 100%;
+  width: 300vw;
   height: 100vh;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: hidden;
   display: flex;
   column-gap: 10%;
+  scroll-behavior: smooth;
 }
 
 /* TEXT-BOXES */
@@ -972,36 +983,6 @@ footer a {
   .imprint_intro {
     margin-left: 0px;
     margin-right: 0px;
-  }
-
-
-  /* HORIZONTAL SCROLL FOR SMALL VIEWPORTS */
-  #wrapper {
-      width: 100vh;
-      height: 100vw;
-      margin: 0px 80px 0px;
-      overflow-y: auto;
-      overflow-x: hidden;
-      -webkit-transform-origin: right top;
-      transform-origin: right top;
-      -webkit-transform: rotate(-90deg) translate3d(0, -100vh, 0);
-      transform: rotate(-90deg) translate3d(0, -100vh, 0);
-  }
-
-  #wrapper>* {
-      -webkit-transform-origin: left top;
-      transform-origin: left top;
-      -webkit-transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
-      transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
-  }
-
-  #wrapper .text-box {
-      position: relative;
-      width: 50%;
-  }
-
-  .css-horizontal-scroll #wrapper {
-      /* Add any additional styles required for the horizontal scroll to work */
   }
 
 }

@@ -3,20 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device.width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" sizes="32x32">
+    <!-- STYLESHEETS -->
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- LOCOMOTIVE SCROLL LIBRARY -->
+    <link rel="stylesheet" href="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.css">
+    <script src="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet">
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device.width, initial-scale=1.0">
+
     <title>Loon – Portfolio</title>
 </head>
 
-<body class="container">
+<body data-scroll-container>
     <button id="backToTopBtn" class="back-to-top-btn" onclick="backToTop()">↑</button>
     <header class="page-header">
         <nav class="navbar">
@@ -51,7 +58,7 @@
         </div>
     </header>
     <main>
-        <section class="home_intro">
+        <section class="home_intro" id="homeIntro" data-scroll-section>
             <img class="home_illu01" src="img/Illu01.svg">
             <div class="text-box">
                 <h1>ideas created
@@ -66,15 +73,16 @@
                 </button>
             </div>
         </section>
-        <section class="home_section--wrapper">
-            <div id="wrapper" class="wrapper">
-                <div class="home_section--2">
+        <section class="home_section--wrapper" data-scroll-section>
+            <div class="wrapper" data-scroll-section>
+                <div class="home_section--2" data-scroll data-scroll-direction="horizontal">
                     <div class="text-box">
                         <img class="home_illu_services" src="./img/services/services_01.svg">
                         <h2>interaction
                             <br>design
                         </h2>
-                        <p class="text"> Designing interactions that seamlessly connect people and technology, ensuring
+                        <p class="text"> Designing interactions that seamlessly connect people and technology,
+                            ensuring
                             intuitive and
                             meaningful digital experiences throughout the user journey.
                         </p>
@@ -91,7 +99,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="home_section--3">
+                <div class="home_section--3" data-scroll data-scroll-direction="horizontal">
                     <div class="text-box">
                         <img class="home_illu_services" src="./img/services/services_03.svg">
                         <h2>user interface
@@ -107,13 +115,14 @@
                         <h2>visual
                             <br>design
                         </h2>
-                        <p class="text"> Prioritising unity and ensuring harmony between elements to create impactful
+                        <p class="text"> Prioritising unity and ensuring harmony between elements to create
+                            impactful
                             first
                             impressions.
                         </p>
                     </div>
                 </div>
-                <div class="home_section--4">
+                <div class="home_section--4" data-scroll data-scroll-direction="horizontal">
                     <div class="text-box">
                         <img class="home_illu_services" src="./img/services/services_05.svg">
                         <h2><span class="transparent">_</span>
@@ -139,17 +148,18 @@
                 </div>
             </div>
         </section>
-        <section class="home_section--5">
+        <section class="home_section--5" data-scroll-section>
             <div class="text-box">
                 <h1 class="resume">resume
                 </h1>
-                <a href="files/Teichert_Hannah_Marleen_Product_Design.pdf" class="button" download>Download (PDF)</a>
+                <a href="files/Teichert_Hannah_Marleen_Product_Design.pdf" class="button" download>Download
+                    (PDF)</a>
             </div>
             <img class="home_illu02" src="img/Illu02.svg">
         </section>
         <section class="divider"><img src="img/Divider01.svg">
         </section>
-        <section class="home_section--6">
+        <section class="home_section--6" data-scroll-section>
             <div class="text-box--6">
                 <h1>get to know
                     <br>me better
@@ -164,6 +174,33 @@
         <a href="imprint.html">IMPRINT</a>
         <button id="back-to-top-btn" class="back-to-top-btn" onclick="backToTop()">↑</button>
     </footer>
+    <script src="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+    <script>
+        // Initialization of Locomotive Scroll
+        document.addEventListener('DOMContentLoaded', function () {
+            const scroll = new LocomotiveScroll({
+                el: document.querySelector('[data-scroll-container]'),
+                smooth: true,
+                multiplier: 0.75,  // Adjust the speed of the scroll
+                reloadOnContextChange: true, // Useful if there are media queries
+                direction: 'vertical', // Default scroll direction
+            });
+
+            // Optional: Update scroll on window resize
+            window.addEventListener('resize', function () {
+                scroll.update();
+            });
+
+            // Example of setting different scroll directions based on the viewport or section
+            scroll.on('call', function (value, way, obj) {
+                if (value === 'horizontal') {
+                    scroll.update({ direction: 'horizontal' });
+                } else if (value === 'vertical') {
+                    scroll.update({ direction: 'vertical' });
+                }
+            });
+        });
+    </script>
     <script src="js/effects.js"></script>
     <script src="js/tota11y.min.js"></script>
 </body>

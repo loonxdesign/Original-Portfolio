@@ -12,7 +12,7 @@ Background Colour: #121212;
 @font-face {
   font-family: 'Constant-Display';
   /* src: url(/fonts/Constant-Display.eot); */
-  src: 
+  src:
     url('../fonts/Constant-Display.woff') format('woff'),
     url('../fonts/Constant-Display.woff2') format('woff2'),
     url('../fonts/Constant-Display.ttf') format('truetype'),
@@ -21,10 +21,11 @@ Background Colour: #121212;
   font-style: normal;
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+body,
+html {
+  height: 100%;
+  overflow: hidden;
+  /* Essential for Locomotive Scroll */
 }
 
 main {
@@ -319,6 +320,7 @@ footer a {
 
 /* SECTIONS */
 .home_intro {
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-flow: row wrap;
@@ -352,8 +354,7 @@ footer a {
   column-gap: 10%;
   width: 100vw;
   min-height: 100vh;
-  flex: 0 0 auto;
-  left: 0;
+  transform: translateX(0px); /* Reset position */
   position: sticky;
   padding: 40px 0px 0px;
 }
@@ -376,21 +377,15 @@ footer a {
 }
 
 /* HORIZONTAL SCROLL */
-.home_section--wrapper {
-  height: 560vh;
+[data-scroll-container] {
   position: relative;
+  overflow: hidden;
 }
 
-.wrapper {
-  top: 0;
-  position: -webkit-sticky;
-  position: sticky;
-  width: 300vw;
-  height: 100vh;
-  overflow: hidden;
+.home_section--wrapper {
   display: flex;
-  column-gap: 10%;
-  scroll-behavior: smooth;
+  flex-direction: column; /* Adjust this if necessary */
+  align-items: start; /* For horizontal sections */
 }
 
 /* TEXT-BOXES */

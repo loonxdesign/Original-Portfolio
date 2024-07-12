@@ -21,19 +21,15 @@ Background Colour: #121212;
   font-style: normal;
 }
 
-body,
-html {
-  height: 100%;
-  overflow: hidden;
-  /* Essential for Locomotive Scroll */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-main {
-  height: 100%;
-}
-
-body {
-  min-height: 100vh;
+html, body {
+  width: 100vw;
+  height: 100vh;
   background-color: #121212;
   font-family: 'Inter', sans-serif;
   font-weight: 200;
@@ -74,8 +70,12 @@ h2 {
   margin-bottom: 38%;
 }
 
-.home_intro p {
-  margin-top: -10%;
+.home_intro .text-box p {
+  margin-top: -40px;
+}
+
+.text-box p {
+  margin-top: 40px;
 }
 
 /* LINKS */
@@ -134,7 +134,7 @@ button:active,
 }
 
 button {
-  margin-top: 4%;
+  margin-top: 8%;
 }
 
 .button--6 {
@@ -343,20 +343,19 @@ footer a {
   }
 }
 
-.home_section--wrapper .wrapper .home_section--2,
-.home_section--wrapper .wrapper .home_section--3,
-.home_section--wrapper .wrapper .home_section--4 {
+.home_section--wrapper .home_section--2,
+.home_section--wrapper .home_section--3,
+.home_section--wrapper .home_section--4 {
+  height: 100vh;
+  width: 100vw;
   background-color: #121212;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   column-gap: 10%;
-  width: 100vw;
-  min-height: 100vh;
-  transform: translateX(0px); /* Reset position */
-  position: sticky;
   padding: 40px 0px 0px;
+  left: 80px;
 }
 
 .home_section--5 {
@@ -377,24 +376,23 @@ footer a {
 }
 
 /* HORIZONTAL SCROLL */
-[data-scroll-container] {
-  position: relative;
-  overflow: hidden;
-}
-
-.home_section--wrapper {
+/* .home_section--wrapper {
+  height: 100%;
+  width: 100vw;
   display: flex;
-  flex-direction: column; /* Adjust this if necessary */
-  align-items: start; /* For horizontal sections */
+  overflow: hidden;
+} */
+
+.wrap {
+  display: flex;
+  flex-direction: row nowrap;
+  height: 100%;
+  width: 300vw;
 }
 
 /* TEXT-BOXES */
 .text-box {
   width: 38%;
-}
-
-.wrapper .text-box h2 {
-  margin-top: 5px;
 }
 
 .text-box--6 {
@@ -867,16 +865,12 @@ footer a {
     gap: 10%;
   }
 
-  .home_section--wrapper {
-    height: 400vh;
-    position: relative;
-  }
+  .home_section--wrapper {}
 
-  .home_section--wrapper .wrapper .home_section--2,
-  .home_section--wrapper .wrapper .home_section--3,
-  .home_section--wrapper .wrapper .home_section--4 {
-    width: 200vw;
-    margin: 120px 40px 0px;
+  .home_section--wrapper .home_section--2,
+  .home_section--wrapper .home_section--3,
+  .home_section--wrapper .home_section--4 {
+    flex-flow: row wrap;
   }
 
   /* TEXT-BOXES */

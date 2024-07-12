@@ -8,8 +8,6 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- LOCOMOTIVE SCROLL LIBRARY -->
-    <link rel="stylesheet" href="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.css">
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +19,7 @@
     <title>Loon – Portfolio</title>
 </head>
 
-<body data-scroll-container>
+<body>
     <button id="backToTopBtn" class="back-to-top-btn" onclick="backToTop()">↑</button>
     <header class="page-header">
         <nav class="navbar">
@@ -56,7 +54,7 @@
         </div>
     </header>
     <main>
-        <section class="home_intro" id="homeIntro" data-scroll-section>
+        <section class="home_intro" id="homeIntro">
             <img class="home_illu01" src="img/Illu01.svg">
             <div class="text-box">
                 <h1>ideas created
@@ -71,80 +69,82 @@
                 </button>
             </div>
         </section>
-        <div class="home_section--wrapper" data-scroll-section>
-            <section class="home_section--2" data-scroll data-scroll-direction="horizontal">
-                <div class="text-box">
-                    <img class="home_illu_services" src="./img/services/services_01.svg">
-                    <h2>interaction
-                        <br>design
-                    </h2>
-                    <p class="text"> Designing interactions that seamlessly connect people and technology,
-                        ensuring
-                        intuitive and
-                        meaningful digital experiences throughout the user journey.
-                    </p>
-                </div>
-                <div class="text-box">
-                    <img class="home_illu_services" src="./img/services/services_02.svg">
-                    <h2>prototype
-                        <br>design
-                    </h2>
-                    <p class="text"> Breathing life into concepts, iterating rapidly to refine ideas, and
-                        identifying
-                        usability
-                        challenges for further evolution.
-                    </p>
-                </div>
-            </section>
-            <section class="home_section--3" data-scroll data-scroll-direction="horizontal">
-                <div class="text-box">
-                    <img class="home_illu_services" src="./img/services/services_03.svg">
-                    <h2>user interface
-                        <br>design
-                    </h2>
-                    <p class="text"> Creating detailed design files that serve as in-depth guides for frontend
-                        developers and ensure
-                        smooth implementation of visual elements and interactions.
-                    </p>
-                </div>
-                <div class="text-box">
-                    <img class="home_illu_services" src="./img/services/services_04.svg">
-                    <h2>visual
-                        <br>design
-                    </h2>
-                    <p class="text"> Prioritising unity and ensuring harmony between elements to create
-                        impactful
-                        first
-                        impressions.
-                    </p>
-                </div>
-            </section>
-            <section class="home_section--4" data-scroll data-scroll-direction="horizontal">
-                <div class="text-box">
-                    <img class="home_illu_services" src="./img/services/services_05.svg">
-                    <h2><span class="transparent">_</span>
-                        <br>illustration
-                    </h2>
-                    <p class="text"> Exploring diverse styles, leaning towards illustrations with a focus on
-                        outlines
-                        and vibrant yet
-                        flat or no colouring, giving an extravagant touch.
-                    </p>
-                </div>
-                <div class="text-box">
-                    <img class="home_illu_services" src="./img/services/services_06.svg">
-                    <h2>frontend
-                        <br>development
-                    </h2>
-                    <p class="text"> Translating design concepts into interactive web experiences, fluidly
-                        integrating
-                        aesthetics and
-                        functionality using HTML, CSS, and JavaScript, while constantly learning and adapting.
-                    </p>
-                </div>
-            </section>
+        <div class="home_section--wrapper" data-scroll-container>
+            <div class="wrap" data-scroll-section>
+                <section class="home_section--2">
+                    <div class="text-box">
+                        <img class="home_illu_services" src="./img/services/services_01.svg">
+                        <h2>interaction
+                            <br>design
+                        </h2>
+                        <p class="text"> Designing interactions that seamlessly connect people and technology,
+                            ensuring
+                            intuitive and
+                            meaningful digital experiences throughout the user journey.
+                        </p>
+                    </div>
+                    <div class="text-box">
+                        <img class="home_illu_services" src="./img/services/services_02.svg">
+                        <h2>prototype
+                            <br>design
+                        </h2>
+                        <p class="text"> Breathing life into concepts, iterating rapidly to refine ideas, and
+                            identifying
+                            usability
+                            challenges for further evolution.
+                        </p>
+                    </div>
+                </section>
+                <section class="home_section--3">
+                    <div class="text-box">
+                        <img class="home_illu_services" src="./img/services/services_03.svg">
+                        <h2>user interface
+                            <br>design
+                        </h2>
+                        <p class="text"> Creating detailed design files that serve as in-depth guides for frontend
+                            developers and ensure
+                            smooth implementation of visual elements and interactions.
+                        </p>
+                    </div>
+                    <div class="text-box">
+                        <img class="home_illu_services" src="./img/services/services_04.svg">
+                        <h2>visual
+                            <br>design
+                        </h2>
+                        <p class="text"> Prioritising unity and ensuring harmony between elements to create
+                            impactful
+                            first
+                            impressions.
+                        </p>
+                    </div>
+                </section>
+                <section class="home_section--4">
+                    <div class="text-box">
+                        <img class="home_illu_services" src="./img/services/services_05.svg">
+                        <h2><span class="transparent">_</span>
+                            <br>illustration
+                        </h2>
+                        <p class="text"> Exploring diverse styles, leaning towards illustrations with a focus on
+                            outlines
+                            and vibrant yet
+                            flat or no colouring, giving an extravagant touch.
+                        </p>
+                    </div>
+                    <div class="text-box">
+                        <img class="home_illu_services" src="./img/services/services_06.svg">
+                        <h2>frontend
+                            <br>development
+                        </h2>
+                        <p class="text"> Translating design concepts into interactive web experiences, fluidly
+                            integrating
+                            aesthetics and
+                            functionality using HTML, CSS, and JavaScript, while constantly learning and adapting.
+                        </p>
+                    </div>
+                </section>
+            </div>
         </div>
-        <section class="home_section--5" data-scroll-section>
+        <section class="home_section--5">
             <div class="text-box">
                 <h1 class="resume">resume
                 </h1>
@@ -155,7 +155,7 @@
         </section>
         <section class="divider"><img src="img/Divider01.svg">
         </section>
-        <section class="home_section--6" data-scroll-section>
+        <section class="home_section--6">
             <div class="text-box--6">
                 <h1>get to know
                     <br>me better
@@ -170,7 +170,7 @@
         <a href="imprint.html">IMPRINT</a>
         <button id="back-to-top-btn" class="back-to-top-btn" onclick="backToTop()">↑</button>
     </footer>
-    <script src="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script src="js/effects.js"></script>
     <script src="js/tota11y.min.js"></script>
 </body>

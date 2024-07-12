@@ -41,28 +41,11 @@ window.addEventListener('scroll', () => {
 });
 
 // HYBRID SCROLL
-document.addEventListener('DOMContentLoaded', () => {
-  const scroller = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true,
-    direction: 'vertical', // default direction
-  });
-
-  scroller.on('scroll', (args) => {
-    // Dynamically adjust scroll direction based on the visibility of specific sections
-    if (
-      args.currentElements['home_section--2'] ||
-      args.currentElements['home_section--3'] ||
-      args.currentElements['home_section--4']
-    ) {
-      // Assuming these elements have been set to scroll horizontally in your HTML with data attributes
-      scroller.update({ direction: 'horizontal' });
-    } else {
-      scroller.update({ direction: 'vertical' });
-    }
-  });
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('[data-scroll-container]'),
+  smooth: true,
+  direction: 'horizontal',
 });
-
 /* // BURGER MENU
 function toggleMenu() {
   const overlay = document.getElementById('overlay');
